@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<!--TITULO PÁGINA-->
+<head>
+	<meta charset='utf-8' />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+  function submitMessage() {
+    alert("VALOR ENVIADO Y GUARDADO CON EXITO");
+  }
+  function submitMessageParaBoton() {
+    alert("Se esta depositando la racion UwU");
+    setTimeout(function(){ document.location.reload(false); }, 500);
+  }
+</script>
+	<title>PeetFeeder</title>
+</head>
+<!--Cuerpo-->
+<body background="peetwpp.jpg">
+<center>
+<!--TITULO-->
+<head>
+<h1>PeetFeeder</h1>
+<img src="itlp.png" width="300"height="300">
+</head>
+
+
+<!--BOTON SERVIR RACIÓN-->
+
+
+<p><a href='/on' onclick="submitMessageParaBoton()"><button>SERVIR RACIÓN</button></a></p>
+
+
+<!--INFORMACION RACION-->
+
+
+<h2>INFORAMCIÓN DE LA RACION</h2>
+
+
+<!--FORMULARIOS-->
+
+
+<!--VARIABLE 1-->
+
+
+<h5>TIEMPO QUE GIRA EL MOTOR PARA SERVIR LA RACIÓN</h5>
+<form action="/get" target="hidden-form">
+    TIEMPO(SEG):(VALOR ACTUAL: %inputInt1% segs): <input type="number" name="inputInt1">
+    <input type="submit" value="Submit" onclick="submitMessage()">
+  </form><br>
+
+<!--VARIABLE 2-->
+
+
+<h5>HORA EN LA QUE EMPIEZA A GIRAR EL MOTOR (POR DIA)</h5>
+<form action="/get" target="hidden-form">
+    HORA: (VALOR ACTUAL: %inputInt2% hs): <input type="number " name="inputInt2">
+    <input type="submit" value="Submit" onclick="submitMessage()">
+  </form><br>
+  <form action="/get" target="hidden-form">
+    MINUTO: (VALOR ACTUAL: %inputInt3% min): <input type="number " name="inputInt3">
+    <input type="submit" value="Submit" onclick="submitMessage()">
+  </form><br>
+
+
+<!--VARIABLE 3-->
+
+
+<h5>ESTADO DEL MOTOR: SI ESTÁ GIRANDO O NO</h5>
+ <p>ESTADO: <strong> %STATE%</strong></p>
+  <iframe style="display:none" name="hidden-form"></iframe>
+</center>
+</body>
+</html>
